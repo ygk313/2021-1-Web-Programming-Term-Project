@@ -1,0 +1,119 @@
+@font-face {
+    font-family: 'TmonMonsori';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/TmonMonsori.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'KyoboHand';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/KyoboHand.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.main-title{
+    color:black;
+    font-size:x-large;
+    font-weight:bold;
+    font-family: 'TmonMonsori';
+    display: inline-block;
+    margin-top:0px;
+}
+
+.container{
+    position:relative;
+    height:400px;
+    width:500px;
+    margin: 0px 0px 0px -300px;
+    top:50%;
+    left:50%;
+    padding:5px;
+    background-image: url("static/아코.png");
+    /* opacity:0.5; */
+    border: 15px solid skyblue;
+    border-radius:20px;
+    background-size: 520px 420px;
+}
+
+.container-main-one{
+    font-family:'TmonMonsori';
+    font-size:xx-large;
+    font-weight:900;
+    position:relative;
+    left:30%;
+    top:20%;
+    padding-left:30px;
+}
+
+.container-main-two{
+    font-family:'TmonMonsori';
+    font-size:xx-large;
+    font-weight:900;
+    position:relative;
+    padding-left:15px;
+    left:30%;
+    top:20%;
+}
+
+.container-main-three{
+    font-family:'KyoboHand';
+    font-size:large;
+    font-weight:900;
+    position:relative;
+    left:30%;
+    top:20%;
+    padding-top:10px;
+}
+
+.choicebox{
+    position: relative;
+    left:21%;
+    top:25%;
+    height:30%;
+}
+
+.choicebox-one{
+    background:#CCE5FF;
+    /* background:white; */
+    opacity:0.9;
+    font-family:'TmonMonsori';
+    width:25%;
+    height:30%;
+    border-radius:10px;
+    display:inline-block;
+    padding:20px 0px 0px 10px;
+}
+
+.choicebox-two{
+    background:#CCE5FF;
+    opacity:0.9;
+    font-family:'TmonMonsori';
+    width:30%;
+    height:30%;
+    border-radius:10px;
+    display:inline-block;
+    padding:20px 0px 0px 15px;
+}
+
+#elephant{
+    border:20px solid #ccefff;
+    border-radius:10px;
+    opacity:0.5;
+    position:relative;
+    height:300px;
+    width:400px;
+    margin: 0px 0px 0px -250px;
+    top:50%;
+    left:50%;
+    padding:5px;
+}
+
+a:link{
+    color:black;
+}
+a:hover{
+    color:black;
+}
+a:visited{
+    color:black;
+}
