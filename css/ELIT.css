@@ -11,10 +11,16 @@
     font-style: normal;
 }
 
-body{
-    font-family: 'TmonMonsori';
+@keyframes changecolor {
+    from {color:orange;}
+    50% {color:orangered;}
+    to{ color: red;}
 }
 
+body{
+    margin-bottom:50px;
+    font-family:'TmonMonsori';
+}
 .main-title{
     color:black;
     font-size:x-large;
@@ -58,12 +64,18 @@ a:visited{
     color:black;
 }
 
-#graduate, #course, #grade{
+#graduate, #course, #grade, #should, #calculate, .book{
     padding-top:20px;
     padding-left:100px;
     margin-bottom:100px;
 }
 
+.book{
+    font-size:larger;
+    animation-duration: 5s;
+    animation-name: changecolor;
+    animation-iteration-count:infinite;
+}
 
 .graduate-table{
     border: 2px solid black;
@@ -85,4 +97,5 @@ td{
 
 input[type=checkbox]{
     display:inline;
+    font-size:large;
 }
