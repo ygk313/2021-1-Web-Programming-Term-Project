@@ -3,8 +3,9 @@
     <head>
         <title>졸업코끼리</title>
         <link rel="icon" href="../favicon.ico">
-        <link rel="stylesheet" href="../css/ELIT.css">
+        <link rel="stylesheet" href="../css/total.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+        <script src="../js/total.js"></script>
     </head>
 
     <body>
@@ -20,7 +21,7 @@
         <nav class="navbar">
             <div class="nav">
                 <a href="#calculate">
-                    취득학점계산
+                    졸업요건확인
                 </a>
             </div>
             <div class="nav">
@@ -80,31 +81,31 @@
                 <img src="../static/img/course.png" width=50%;>
                 <div class="box">
                     <div>
-                        <input type="checkbox" id="ch1"><label for="ch1">대학생활탐구(1학점)</label>
+                        <input type="checkbox" id="ch1" value="1" onclick="check(this)"><label for="ch1">대학생활탐구(1학점)</label>
                     </div>
                     <div>
-                        <input type="checkbox" id="ch2"><label for="ch2">자아성찰(4학점)</label>
+                        <input type="checkbox" id="ch2" value="4" onclick="check(this)"><label for="ch2">자아성찰(4학점)</label>
                     </div>
                     <div>
-                        <input type="checkbox" id="ch3"><label for="ch3">21C 시민, 지역 연구, 미래위험(2학점)</label>
+                        <input type="checkbox" id="ch3" value="2" onclick="check(this)"><label for="ch3">21C 시민, 지역 연구, 미래위험(2학점)</label>
                     </div>
                     <div>
-                        <input type="checkbox" id="ch4"><label for="ch5">글쓰기(3학점)</label>
+                        <input type="checkbox" id="ch4" value="3" onclick="check(this)"><label for="ch5">글쓰기(3학점)</label>
                     </div>
                     <div>
-                        <input type="checkbox" id="ch5"><label for="ch5">세미나(9학점)</label>
+                        <input type="checkbox" id="ch5" value="9" onclick="check(this)"><label for="ch5">세미나(9학점)</label>
                     </div>
                     <div>
-                        <input type="checkbox" id="ch6"><label for="ch6">리더십(2학점)</label>
+                        <input type="checkbox" id="ch6" value="2" onclick="check(this)"><label for="ch6">리더십(2학점)</label>
                     </div>
                     <div>
-                        <input type="checkbox" id="ch7"><label for="ch7">영어(4학점)</label>
+                        <input type="checkbox" id="ch7" value="4" onclick="check(this)"><label for="ch7">영어(4학점)</label>
                     </div>
                     <div>
-                        <input type="checkbox" id="ch8"><label for="ch8">소프트웨어(4학점)</label>
+                        <input type="checkbox" id="ch8" value="4" onclick="check(this)"><label for="ch8">소프트웨어(4학점)</label>
                     </div>
                     <hr style="margin:10px 0px 20px 0px">
-                    <h4 style="margin:0px 0px 0px 200px;">현재 이수 학점: 0/29</h4>
+                    <h4 style="margin:0px 0px 0px 200px;">현재 이수 학점: <span id="cur_num">0</span>/29</h4>
                 </div>    
             </div>
         </div>
@@ -141,84 +142,66 @@
             <h1>필수과목</h1>
             <h4>졸업논문 캡스톤 수강을 통한 졸업논문 완성 및 제출</h4>
             <h4 style="text-decoration:underline">각 트랙에 해당하는 수업은 무조건 이수해야합니다!</h4>
-            <div>
+            <div class="check">
                 <img src="../static/img/name1.png" width=50% height=30%>
                 <img src="../static/img/name2.png" width=50% height=30%>
+                <div class="box">
+                    <div>
+                        <input type="checkbox" id="nec1" onclick = "grad_check(this)"><label for="nec1">졸업 캡스톤 수강</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="nec2" onclick = "grad_check(this)"><label for="nec2">영어학입문</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="nec3" onclick = "grad_check(this)"><label for="nec3">번역학입문</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="nec4" onclick = "grad_check(this)"><label for="nec4">통역트랙</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="nec5 " onclick = "grad_check(this)"><label for="nec5">번역트랙</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="nec6 " onclick = "grad_check(this)"><label for="nec6">영어학트랙_1</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="nec7 " onclick = "grad_check(this)"><label for="nec7">영어학트랙_2</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="nec8 " onclick = "grad_check(this)"><label for="nec8">선택필수</label>
+                    </div>
+                </div>
             </div>
         </div>
 
         <div id="calculate">
-            <h1>취득학점계산</h1>
+            <h1>졸업요건확인</h1>
             
             <div class="check">
                 <h2 style="padding-left:5px;"> &lt; 졸업요건확인 &gt;</h2>
                 
                 <div class="box">
                     <div>
-                        <input type="checkbox" id="cal1"><label for="cal1">졸업 논문제출하셨나요?</label>
+                        <input type="checkbox" id="cal1" onclick = "grad_check(this)"><label for="cal1">졸업 논문제출하셨나요?</label>
                     </div>
                     <div>
-                        <input type="checkbox" id="cal2"><label for="cal2">학점이 2.0이상인가요?</label>
+                        <input type="checkbox" id="cal2" onclick = "grad_check(this)"><label for="cal2">학점이 2.0이상인가요?</label>
                     </div>
                     <div>
-                        <input type="checkbox" id="cal3"><label for="cal3">외국어 수업 4개 이상 수강했나요?</label>
+                        <input type="checkbox" id="cal3" onclick = "grad_check(this)"><label for="cal3">외국어 수업 4개 이상 수강했나요?</label>
                     </div>
                     <div>
-                        <input type="checkbox" id="cal4"><label for="cal4">800점이상 토익점수 교양외국어센터에 제출했나요?</label>
+                        <input type="checkbox" id="cal4" onclick = "grad_check(this)"><label for="cal4">800점이상 토익점수 교양외국어센터에 제출했나요?</label>
                     </div>
                     <div>
-                        <input type="checkbox" id="cal5"><label for="cal5">취득학점이 130이 넘나요?</label>
+                        <input type="checkbox" id="cal5 " onclick = "grad_check(this)"><label for="cal5">취득학점이 130이 넘나요?</label>
                     </div>
-                </div>   
-
-                <h2 style="padding-left:5px; margin-top:50px;"> &lt; 취득학점 &gt;</h2>
-                <h3 style="padding-left:10px;"> ※딘일전공과 복수전공은 해당하는 값만 넣어주세요.</h3>
-               
-                <div class="box">
-                    <h3 style="padding-left:10px;"> 총 130학점</h3>
-
-                    <ul>
-                        <li>
-                            <label for="get1">공통교양 : </label>
-                            <input type="number" id="get1" value="0">
-                        </li>
-                        <li>
-                            <label for="get2">핵심교양 : </label>
-                            <input type="number" id="get2" value="0">
-                        </li>
-                        <li>
-                            <label for="get3">학문기초: </label>
-                            <input type="number" id="get3" value="0">
-                        </li>
-                        <li>
-                            <label for="get4">단일전공: </label>
-                            <input type="number" id="get4" value="0">
-                        </li>
-                        <li>
-                            <h4 style="margin:0px;">복수전공</h4>
-                            <ul>
-                                <li>
-                                    <label for="get5">주전공1: </label>
-                                    <input type="number" id="get5" value="0">
-                                </li>
-                                <li>
-                                    <label for="get6">주전공2: </label>
-                                    <input type="number" id="get6" value="0">
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-
-                    
-                    <hr style="margin:10px 0px 20px 0px">
-                    <h4 style="margin:0px 0px 0px 200px;">남은 학점: 0/130</h4>
-                </div>  
-
+                </div>      
             </div>
         </div>
 
         <a class="book" href="https://www.dongguk.edu/mbs/kr/images/sub/05_life/2021_edu.pdf">학업이수가이드 다운로드</a>
-        <a style="display:scroll;position:fixed;bottom:10px;right:10px;" href="#" title="맨위로"><i class="far fa-arrow-alt-circle-up" style="color:skyblue"></i></a>
+        <a style="display:scroll;position:fixed;bottom:10px;right:10px;" href="#" title="맨위로"><i class="far fa-arrow-alt-circle-up fa-3x" style="color:skyblue"></i></a>
 
     </body>
 </html>

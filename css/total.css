@@ -95,7 +95,7 @@ td{
     display:inline-block;
 }
 
-input[type=checkbox]{
+input[type="checkbox"]{
     display:inline;
     font-size:large;
 }
