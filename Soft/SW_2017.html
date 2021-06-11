@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>졸업코끼리</title>
+        <link rel="icon" href="../favicon.ico">
+        <link rel="stylesheet" href="../css/total.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+        <script src="../js/total.js"></script>
+    </head>
+
+    <body>
+        <a href="../main.html">
+            <p class="main-title">졸업코끼리<i class="fas fa-home fa-1x"></i></p>
+        </a>
+        
+
+        <div style="padding-left:100px;">
+            <a href="../SW.html">
+                <h1 class="title" >융합소프트웨어전공</h1>
+            </a>
+            <h4 class="year">&nbsp;2017학년도~2019학년도</h4>
+        </div>    
+
+        <nav class="navbar">
+            <div class="nav">
+                <a href="#calc">
+                    이수학점계산
+                </a>
+            </div>
+            <div class="nav">
+                <a href="#grade">
+                    선이수과목
+                </a>
+            </div>
+            <div class="nav">
+                <a href="#course">
+                    이수체계
+                </a>
+            </div>
+            <div class="nav">
+                <a href="#graduate">
+                    졸업요건
+                </a>
+            </div>
+        </nav>
+
+        <div id="graduate">
+            <h1>졸업요건</h1>
+            <h4> 아래 항목들을 만족해야 졸업 신청이 가능합니다.</h4>
+
+            <table class="graduate-table" width=50%>
+                <tbody>
+                    <tr>
+                        <td class="td-title">취득학점</td><td>36학점(전공필수 18학점, 전공선택 18학점)</td>
+                    </tr>
+                    <tr>
+                        <td class="td-title">졸업논문</td><td>융합캡스톤디자인의 결과물로 대체</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+        </div>
+
+        <div id="course">
+            <h1>이수체계</h1>
+            <h4> 융합교육원이 권장하는 이수체계입니다.</h4>
+            
+            <div class="check">
+                <img src="../static/img/catalog_2017.PNG" width=50%;>                       
+            </div>
+        </div>
+
+        <div id="grade">
+            <h1>선이수과목</h1>
+            <h4>융합교육원이 권장하는 선이수과목입니다.</h4>
+
+            <table width=50% style="border-collapse:collapse;border:3px solid black;">
+                <thead>
+                    <tr>
+                        <th style="background-color:lightgray">교과목명</th>
+                        <th style="border-left:2px solid black;background-color:lightgray">선 이수 과목</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>융합캡스톤디자인</td><td>자료구조및알고리즘1</td>
+                    </tr>
+                    <tr>
+                        <td>모바일프로그래밍</td><td>융합프로그래밍1</td>
+                    </tr>
+                    <tr>
+                        <td>오픈소스소프트웨어프로젝트</td><td>융합프로그래밍1</td>
+                    </tr>
+                    <tr>
+                        <td>자료구조및알고리즘1</td><td>융합프로그래밍1</td>
+                    </tr>
+                    <tr>
+                        <td>자료구조및알고리즘2</td><td>융합프로그래밍1, 자료구조및알고리즘1</td>
+                    </tr>
+                    <tr>
+                        <td>융합프로그래밍2</td><td>융합프로그래밍1</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="calculate">
+            <h1>이수학점계산</h1>
+            
+            <div class="check">
+                <h2 style="padding-left:5px;"> &lt; 전공필수 18학점 &gt;</h2>
+                <div class="box">
+                    <div>
+                        <input type="checkbox" id="ch0" value="3" onclick="check(this)"><label for="ch0">컴퓨터기초수학</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="ch1" value="3" onclick="check(this)"><label for="ch1">컴퓨터시스템</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="ch2" value="3" onclick="check(this)"><label for="ch2">융합프로그래밍</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="ch4" value="3" onclick="check(this)"><label for="ch5">자료구조및알고리즘1</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="ch5" value="3" onclick="check(this)"><label for="ch5">오픈소스소프트웨어프로젝트</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="ch6" value="3" onclick="check(this)"><label for="ch6">융합캡스톤디자인</label>
+                    </div>
+        
+                    <hr style="margin:10px 0px 20px 0px">
+                    <h4 style="margin:0px 0px 0px 200px;">현재 이수 학점: <span id="cur_num">0</span>/18학점</h4>
+                </div> 
+               
+
+                <h2 style="padding-left:5px; margin-top:50px;"> &lt; 전공선택 18학점 &gt;</h2>
+                <h3 style="padding-left:10px;"> 수강한 과목을 선택해 주세요</h3>
+               
+                <div class="box">
+                    <div>
+                        <input type="checkbox" id="op2" value="3" onclick="check_op(this)"><label for="op2">파이썬프로그래밍</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="op3" value="3" onclick="check_op(this)"><label for="op3">데이터베이스</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="op4" value="3" onclick="check_op(this)"><label for="op4">컴퓨터네트워크및보안</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="op5" value="3" onclick="check_op(this)"><label for="op5">인공지능입문</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="op6" value="3" onclick="check_op(this)"><label for="op6">사물인터넷프로젝트</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="op7" value="3" onclick="check_op(this)"><label for="op7">사물인터넷기초</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="op8" value="3" onclick="check_op(this)"><label for="op8">머신러닝및딥러닝</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="op9" value="3" onclick="check_op(this)"><label for="op9">자료구조및알고리즘2</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="op10" value="3" onclick="check_op(this)"><label for="op10">모바일프로그래밍</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="op11" value="3" onclick="check_op(this)"><label for="op11">웹프로그래밍</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="op12" value="3" onclick="check_op(this)"><label for="op12">데이터사이언스개론</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="op13" value="3" onclick="check_op(this)"><label for="op13">머신러닝과데이터사이언스</label>
+                    </div>
+                    <div>
+                    <hr style="margin:10px 0px 20px 0px">
+                    <h4 style="margin:0px 0px 0px 200px;">남은 학점: <span id="cur_op">18</span>점</h4>
+                </div> 
+            </div>
+         </div>
+         </div>
+        <a class="book" href="https://itcec.dongguk.edu/bbs/board.php?bo_table=itedu4_11&wr_id=257&sca=&sfl=wr_subject&stx=2019&sop=and&page=2">2019 SW연계전공 코스카달로그</a>
+        <a style="display:scroll;position:fixed;bottom:10px;right:10px;" href="#" title="맨위로"><i class="far fa-arrow-alt-circle-up fa-3x" style="color:skyblue"></i></a>
+
+    </body>
+</html>
